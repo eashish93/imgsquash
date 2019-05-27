@@ -1,0 +1,38 @@
+{
+    "name": "imgsquash-api",
+    "version": "1.0.0",
+    "description": "API Server for imgsquash",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "dev": "backpack",
+        "start": "NODE_ENV=production node ./build/main.js",
+        "build": "backpack build",
+        "test": "jest"
+    },
+    "author": "eashish93",
+    "license": "MIT",
+    "dependencies": {
+        "@google-cloud/logging-bunyan": "^0.10.1",
+        "@google-cloud/storage": "^2.5.0",
+        "archiver": "^3.0.0",
+        "backpack-core": "^0.8.3",
+        "bunyan": "^1.8.12",
+        "bunyan-format": "^0.2.1",
+        "chalk": "^2.4.2",
+        "concat-stream": "^2.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "file-type": "^11.1.0",
+        "imagemin": "^6.1.0",
+        "imagemin-jpegtran": "^6.0.0",
+        "imagemin-mozjpeg": "^8.0.0",
+        "imagemin-optipng": "^7.0.0",
+        "imagemin-pngquant": "^7.0.0",
+        "morgan": "^1.9.1",
+        "multer": "^2.0.0-alpha.7",
+        "pump": "^3.0.0",
+        "request": "^2.88.0"
+    }
+}

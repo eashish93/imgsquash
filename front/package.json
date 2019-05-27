@@ -1,0 +1,26 @@
+{
+    "name": "imgsquash-front",
+    "version": "1.0.0",
+    "description": "frontend code for imgsquash",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev --port 3001",
+        "build": "next build",
+        "start": "next start --port 3001"
+    },
+    "author": "eashish93",
+    "license": "MIT",
+    "dependencies": {
+        "async": "^3.0.1",
+        "next": "^8.1.0",
+        "pretty-bytes": "^5.2.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-dropzone": "^10.1.5",
+        "react-redux": "^7.0.3",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0",
+        "superagent": "^5.0.5",
+        "url-parse": "^1.4.7"
+    }
+}
