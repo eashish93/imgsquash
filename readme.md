@@ -13,29 +13,31 @@ Image compression full stack website code. Contains both api service and fronten
 &emsp;
 
 ### SETTING UP GOOGLE CLOUD STORAGE
-1. Create a project on google cloud and add a free cloud storage bucket via this quickstart guide: 
+1. Create a project on google cloud and add a free cloud storage bucket via this quickstart guide:
     - <https://cloud.google.com/storage/docs/quickstart-console>
 2. Authenticate using either `gcloud` command line tool ([download here](https://cloud.google.com/sdk/docs/downloads-interactive)) or set `GOOGLE_APPLICATION_CREDENTIALS` env variable with the service account file.
     - Guide here: <https://cloud.google.com/sdk/docs/authorizing>
 
 
-### STARTING THE API SERVICE 
+### STARTING THE API SERVICE
 1. Create `.env` file in the root of the folder with the following variables.
-    - __API_VERSION__ : 1 (default)
-    - __GC_STORAGE__ : your-google-cloud-bucket-name
-    - __DL_BASE_URL__ : [YOUR-API-URL]/1/dl
-2. Do `npm install` to install all node modules.
+    ```
+    API_VERSION: 1
+    GC_STORAGE: [your-google-cloud-bucket-name]
+    DL_BASE_URL: [your-google-cloud-bucket-url]/1/dl
+    ```
+2. Do `npm install` in  `api`  to install all node modules.
 3. Do `npm run dev` to start the dev server on `3000` port.
 4. Do `npm start` for production
 
 
-### STARTING THE FRONTEND 
+### STARTING THE FRONTEND
 1. Do `npm start` to install.
 2. Do `npm run dev` will start the webpack server on `3001` port.
 3. Do `npm build` and `npm start` to build and use the code in production.
 
 
-### NOTES 
+### NOTES
 
 1. Following programs are used for optimization
     - mozjpeg (lossy jpeg compression)
@@ -55,7 +57,7 @@ Image compression full stack website code. Contains both api service and fronten
 
     [GET]
         - `/dl/:id`: Generate download url of compressed image. Accept optional query `name`.
-        
-        
- ### LICENSE 
+
+
+ ### LICENSE
  MIT
