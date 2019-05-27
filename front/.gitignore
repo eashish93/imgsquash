@@ -24,8 +24,21 @@ yarn-error.log*
 tmp*
 
 
+# Yarn Integrity file
+.yarn-integrity
+
+# Output of 'npm pack'
+*.tgz
+
+# Optional eslint cache
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
 # Runtime data
 pids
 *.pid
 *.seed
 *.pid.lock
+.DS_Store

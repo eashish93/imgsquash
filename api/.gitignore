@@ -28,3 +28,4 @@ pids
 *.pid
 *.seed
 *.pid.lock
+.DS_Store
