@@ -20,19 +20,19 @@ Image compression full stack website code. Contains both api service and fronten
 
 
 ### STARTING THE API SERVICE 
-1. Create `.env` file in the root of the folder with the following variables.
-    - __API_VERSION__ : 1 (default)
-    - __GC_STORAGE__ : your-google-cloud-bucket-name
-    - __DL_BASE_URL__ : [YOUR-API-URL]/1/dl
-2. Do `npm install` to install all node modules.
+1. Create `.env` file in the root of the folder with the following variables. See [dotenv](https://www.npmjs.com/package/dotenv) on how to add env variables.
+    - __API_VERSION__ : `1` (optional).
+    - __GC_STORAGE__ : `your-google-cloud-bucket-name` 
+    - __DL_BASE_URL__ : `[YOUR-API-URL]/1/dl` 
+2. Do `npm install` to install all node modules for api.
 3. Do `npm run dev` to start the dev server on `3000` port.
 4. Do `npm start` for production
 
 
 ### STARTING THE FRONTEND 
-1. Do `npm start` to install.
+1. Do `npm install` to install all node modules for frontend.
 2. Do `npm run dev` will start the webpack server on `3001` port.
-3. Do `npm build` and `npm start` to build and use the code in production.
+3. Do `npm run build` and `npm start` to build and use the code in production.
 
 
 ### NOTES 
