@@ -50,11 +50,23 @@ https://abc.com/p/w23s.png, abc.com/a/s3sd?q=search&q=32#hash.
 // TODO: Handle rate limit when user send multiple urls from the same domain.
 const storage   = new Storage();
 const gcsBucket = storage.bucket(GC_STORAGE);
-
+const strReplace = function (s, regexp, callback) {
+        return s === undefined ? 'undefined'
+                : s === null            ? 'null'
+                : s.toString().replace(regexp, callback);
+}
 async function urlCtrl(req, res, next) {
-    let url;
+    let url = strReplace(req.body.url, /[()<>"'`]/g, function (m) {
+            return m === '<' ? '&lt;'
+                :  m === '>' ? '&gt;'
+                :  m === '"' ? '&quot;'
+                :  m === "'" ? '&#39;'
+                :  m === "(" ? '&#40;'
+                :  m === ")" ? '&#41;'
+                :  '&#96;';       
+        });
     try {
-        url = new URL(req.body.url);
+        url = new URL(url);
     }
     catch(e) {
         // TODO: Better error message for url parse.
